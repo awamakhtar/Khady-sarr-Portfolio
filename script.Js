@@ -1,17 +1,28 @@
-
-  // ── Hamburger menu ──
+// ── Hamburger menu ──
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
+  function openMenu() {
+    hamburger.classList.add('open');
+    mobileMenu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 
   function closeMenu() {
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
   }
+
+  function toggleMenu() {
+    if (mobileMenu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
 
   // Close mobile menu when a link is clicked
   document.querySelectorAll('.mobile-menu a').forEach(link => {
@@ -20,7 +31,16 @@
 
   // Close menu on resize to desktop
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 767) closeMenu();
+    if (window.innerWidth > 1279) closeMenu();
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('open') &&
+        !mobileMenu.contains(e.target) &&
+        !hamburger.contains(e.target)) {
+      closeMenu();
+    }
   });
 
   // ── Active nav link on scroll ──
@@ -56,5 +76,3 @@
     fill.style.animationPlayState = 'paused';
     barObserver.observe(fill);
   });
-
-
