@@ -529,6 +529,9 @@
     .contact-card-link {
       text-decoration: none;
     }
+    .contact-card-email {
+      text-decoration: none;
+    }
 
     /* ══════════════════════════════════════
        FOOTER
@@ -1091,7 +1094,7 @@
           <div class="contact-card-value2">+221 76 746 75 98</div>
         </div>
       </a>
-      <a href="mailto:khadyje92@gmail.com" style="text-decoration:none;">
+      <a href="mailto:khadyje92@gmail.com" class="contact-card-email">
         <div class="contact-card">
           <div class="contact-card-icon"><i class="fa-regular fa-envelope"></i></div>
           <div class="contact-card-label">Email</div>
@@ -1113,17 +1116,9 @@
   <div class="footer-sep"></div>
   <div class="footer-copy"><i class="fa-solid fa-briefcase"></i>Comptable Expérimentée · Dakar, Sénégal</div>
   <div class="footer-sep"></div>
-  <div class="footer-copy"><i class="fa-regular fa-envelope"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9df6f5fcf9e4f7f8a4afddfaf0fcf4f1b3fef2f0">[email&#160;protected]</a></div>
+  <div class="footer-copy"><i class="fa-regular fa-envelope"></i><a href="mailto:khadyje92@gmail.com" class="__cf_email__">khadyje92@gmail.com</a></div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListene
-r('click', () => {
-    mobileMenu.classList.toggle('active');
-  });
-  function closeMenu() {
-    mobileMenu.classList.remove('active');
-  }
+<script src="script.js"></script>
+</body>
+</html>
