@@ -1,21 +1,20 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-      :root {
-        --navy:       #0B1F3A;
-        --navy-mid:   #122B4F;
-        --teal:       #00B4A6;
-        --teal-light: #00D4C4;
-        --gold:       #E8C547;
-        --cream:      #F7F4EE;
-        --white:      #FFFFFF;
-        --text:       #2C3E50;
-        --muted:      #6B7C93;
-        /* Padding system */
-        --px-lg: 80px;
-        --px-md: 40px;
-        --px-sm: 20px;
-        --section-py: 90px;
-      }
+:root {
+--navy:       #0B1F3A;
+--navy-mid:   #122B4F;
+--teal:       #00B4A6;
+--teal-light: #00D4C4;
+--gold:       #E8C547;
+--cream:      #F7F4EE;
+--white:      #FFFFFF;
+--text:       #2C3E50;
+--muted:      #6B7C93;
+/* Padding system */
+--px-lg: 80px;
+--px-md: 40px;
+--px-sm: 20px;
+--section-py: 90px;}
 
       html { scroll-behavior: smooth; }
       body {
